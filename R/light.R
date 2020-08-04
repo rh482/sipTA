@@ -1,6 +1,6 @@
 #' Calculates light isotope tube shift
 #'
-#' @param data A dataframe.
+#' @param data A dataframe containing taxon wad values per tube
 #' @export
 
 tube_shift_light = function(data = wad_long) {
