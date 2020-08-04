@@ -7,7 +7,7 @@
 #'
 
 tube_shift_heavy = function(data = wad_long, light = df_12C, low = 0, high = 0.1) {
-
+  require(tidyverse)
   taxon_12C_standard = light %>%
     select(taxon, taxon_12C_standard) %>%
     unique()

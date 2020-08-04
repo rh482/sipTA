@@ -7,6 +7,7 @@
 #'
 
 stress_test = function(data = wad_long, light = df_12C, window = 0.1, step = 0.1){
+  require(tidyverse)
   f = seq(0, 1 - window, by = step)
   df = data.frame()
   for (i in f) {
