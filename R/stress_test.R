@@ -23,6 +23,7 @@ stress_test = function(data = wad_long, light = df_12C, window = 0.1, step = 0.1
 }
 
 stress_test(window = .1, step = 0.1) %>%
+  require(tidyverse)
   ggplot(aes(x = low, y = stress)) +
   geom_point()
 
