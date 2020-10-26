@@ -34,4 +34,3 @@ stress_test_plot = function(stress_test_results){
     theme_classic() +
     geom_point()
 }
-

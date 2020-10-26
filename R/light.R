@@ -6,7 +6,7 @@
 tube_shift_light = function(data) {
   require(tidyverse)
   data = data %>%
-    filter(Isotope == "12C" & wads != "NA") %>%
+    filter(Isotope == "12C" & wads != "NA" & wads != "NaN") %>%
     group_by(taxon) %>%
     mutate(taxon_12C_standard = median(wads),
            diff_from_12C_standard = taxon_12C_standard - wads,
