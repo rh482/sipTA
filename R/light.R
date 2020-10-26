@@ -3,7 +3,7 @@
 #' @param data A dataframe containing taxon wad values per tube
 #' @export
 
-tube_shift_light = function(data = wad_long) {
+tube_shift_light = function(data) {
   require(tidyverse)
   data = data %>%
     filter(Isotope == "12C" & wads != "NA") %>%

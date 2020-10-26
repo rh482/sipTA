@@ -4,10 +4,10 @@
 \alias{tube_shift_light}
 \title{Calculates light isotope tube shift}
 \usage{
-tube_shift_light(data = wad_long)
+tube_shift_light(data)
 }
 \arguments{
-\item{data}{A dataframe.}
+\item{data}{A dataframe containing taxon wad values per tube}
 }
 \description{
 Calculates light isotope tube shift
