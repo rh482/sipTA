@@ -4,9 +4,9 @@
 #' @export
 
 tube_shift_light = function(data = wad_long) {
-  require(tidyverse)
+  
   data = data %>%
-    filter(Isotope == "12C" & wads != "NA") %>%
+    filter(Isotope == "12C" & wads != "NA" & wads != "NaN") %>%
     group_by(taxon) %>%
     mutate(taxon_12C_standard = median(wads),
            diff_from_12C_standard = taxon_12C_standard - wads,
@@ -20,6 +20,7 @@ tube_shift_light = function(data = wad_long) {
            tube_rank_diff = percent_rank(-diff_from_12C_standard),
            inactive = TRUE) %>%
     ungroup()
-
+  
   return(data)
 }
+
